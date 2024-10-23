@@ -1,0 +1,74 @@
+.workouts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between items */
+}
+
+.workDetails {
+  padding: 15px;
+  padding-left: 40px;
+  padding-right: 600px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: transform 0.2s;
+}
+
+.workDetails:hover {
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+strong {
+  color: #555;
+}
+
+.workoutsDiv {
+  display: flex;
+  gap: 5px;
+}
+
+/* Media Queries for responsiveness */
+
+/* For devices with a max-width of 1200px */
+@media (max-width: 1200px) {
+  .workDetails {
+    padding-right: 400px; /* Reduce right padding */
+    margin-right: 50px;
+  }
+}
+
+/* For devices with a max-width of 900px */
+@media (max-width: 900px) {
+  .workDetails {
+    padding-right: 200px; /* Reduce right padding further */
+  }
+  .workoutsDiv {
+    flex-direction: column-reverse; /* Stack items vertically */
+  }
+}
+
+/* For devices with a max-width of 768px (tablets) */
+@media (max-width: 768px) {
+  .workDetails {
+    padding-right: 100px;
+    padding-left: 20px;
+  }
+
+  .workoutsDiv {
+    flex-direction: column-reverse; /* Stack items vertically */
+  }
+}
+
+/* For devices with a max-width of 600px (small screens and phones) */
+@media (max-width: 600px) {
+  .workDetails {
+    padding-right: 20px;
+    padding-left: 15px;
+    padding: 10px; /* Adjust overall padding for smaller screens */
+  }
+
+  .workoutsDiv {
+    flex-direction: column-reverse; /* Stack items vertically */
+    gap: 10px;
+  }
+}

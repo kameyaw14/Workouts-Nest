@@ -1,0 +1,121 @@
+.WorkoutForm {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 40px auto;
+    margin-right: 100px;
+  }
+  
+  .WorkoutForm h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .formSection {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:active {
+    background-color: #004494;
+  }
+  
+  .error {
+    margin-top: 10px;
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Media Queries for responsiveness */
+  
+  /* For devices with a max-width of 768px (tablets) */
+
+  @media (max-width: 900px) {
+    .WorkoutForm {
+        max-width: 90%;
+        margin: 20px auto;
+        margin-right: 60px;
+        padding: 15px;
+      }
+  }
+
+  @media (max-width: 768px) {
+    .WorkoutForm {
+      max-width: 90%;
+      margin: 20px auto;
+      margin-right: 60px;
+      padding: 15px;
+    }
+  
+    button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    input[type="text"],
+    input[type="number"] {
+      font-size: 13px;
+      padding: 6px 8px;
+    }
+  }
+  
+  /* For devices with a max-width of 600px (small screens and phones) */
+  @media (max-width: 600px) {
+    .WorkoutForm {
+      max-width: 95%;
+      padding: 10px;
+    }
+  
+    button {
+      font-size: 13px;
+      padding: 8px;
+    }
+  
+    input[type="text"],
+    input[type="number"] {
+      font-size: 12px;
+      padding: 6px;
+    }
+  }
+  
