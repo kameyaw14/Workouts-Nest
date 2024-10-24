@@ -25,6 +25,7 @@ const Home = () => {
       <div>
         <h1>ALL WORKOUTS</h1>
         <div className="workouts">
+          {myWorkouts.length === 0 && <div>no available workouts</div>}
           {myWorkouts ? (
             myWorkouts.map((item) => (
               <WorkoutDetails key={item._id} workout={item} />

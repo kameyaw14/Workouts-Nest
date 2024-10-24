@@ -127,4 +127,16 @@
       padding: 6px;
     }
   }
+
+  .error {
+    border: 2px solid red; 
+    background-color: #ffe6e6; 
+    
+  }
+  
+  .errorMessage {
+    color: red; 
+    margin-top: 10px;
+    font-weight: bold; 
+  }
   

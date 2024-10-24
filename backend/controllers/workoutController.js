@@ -34,6 +34,16 @@ const getSingleWorkout = async (req,res)=>{
 const createNewWorkout = async(req,res)=>{
     const {workout_name, reps , weight} = req.body
 
+    if (!workout_name) {
+        return res.status(400).json({ error: 'Please fill in the workout name!!' })
+    }
+    if (!reps == null) {
+        return res.status(400).json({ error: 'Please enter the number of reps!!' })
+    }
+    if (!weight == null) {
+        return res.status(400).json({ error: 'Please enter the weight!!' })
+    }
+
     try {
         const newWorkout = await workoutModel.create({workout_name, reps , weight})
         res.status(200).json(newWorkout)

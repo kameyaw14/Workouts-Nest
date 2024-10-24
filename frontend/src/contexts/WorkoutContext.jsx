@@ -19,7 +19,7 @@ const WorkoutReducer = (state, action) => {
 
 const WorkoutContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(WorkoutReducer, {
-    myWorkouts: null,
+    myWorkouts: [],
   });
 
   return (

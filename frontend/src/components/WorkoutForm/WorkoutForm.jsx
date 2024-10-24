@@ -13,6 +13,20 @@ const WorkoutForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError(null);
+
+    const errorMessages = [];
+
+    if (!workoutTitle) errorMessages.push("Please fill in the workout name!!");
+    if (!workoutLoad) errorMessages.push("Please enter the load!!");
+    if (!workoutReps) errorMessages.push("Please enter the reps!!");
+    if (workoutLoad < 0) errorMessages.push("Please enter valid load!!");
+    if (workoutReps < 0) errorMessages.push("Please enter valid reps!!");
+
+    if (errorMessages.length > 0) {
+      setError(errorMessages.join(" "));
+      return;
+    }
 
     const myWorkout = {
       workout_name: workoutTitle,
@@ -53,6 +67,7 @@ const WorkoutForm = () => {
             type="text"
             onChange={(e) => setWorkoutTitle(e.target.value)}
             value={workoutTitle}
+            className={error && !workoutTitle ? "error" : ""}
           />
         </div>
 
@@ -62,6 +77,7 @@ const WorkoutForm = () => {
             type="number"
             onChange={(e) => setWorkoutLoad(e.target.value)}
             value={workoutLoad}
+            className={error && !workoutLoad ? "error" : ""}
           />
         </div>
 
@@ -71,11 +87,12 @@ const WorkoutForm = () => {
             type="number"
             onChange={(e) => setWorkoutReps(e.target.value)}
             value={workoutReps}
+            className={error && !workoutReps ? "error" : ""}
           />
         </div>
 
         <button>Add Workout</button>
-        {error && <div>error: {error}</div>}
+        {error && <div className="errorMessage"> {error}</div>}
       </form>
     </div>
   );
