@@ -12,6 +12,7 @@
   border-radius: 5px;
   background-color: #fff;
   transition: transform 0.2s;
+  position: relative;
 }
 
 .workDetails:hover {

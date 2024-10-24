@@ -58,6 +58,15 @@
   button:active {
     background-color: #004494;
   }
+  .delete-btn{
+    width: 10%;
+    background: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 20px;
+    margin-top: 20px;
+  }
   
   .error {
     margin-top: 10px;

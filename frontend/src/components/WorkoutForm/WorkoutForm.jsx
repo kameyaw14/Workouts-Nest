@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import "./WorkoutForm.css";
 import { useNavigate } from "react-router-dom";
+import { UseWorkoutContext } from "../../hooks/UseWorkoutContext";
 
 const WorkoutForm = () => {
   const [workoutTitle, setWorkoutTitle] = useState("");
   const [workoutLoad, setWorkoutLoad] = useState("");
   const [workoutReps, setWorkoutReps] = useState("");
   const [error, setError] = useState(null);
+  const { dispatch } = UseWorkoutContext();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -36,6 +38,7 @@ const WorkoutForm = () => {
       setWorkoutLoad("");
       setWorkoutReps("");
       setWorkoutTitle("");
+      dispatch({ type: "CREATE_WORKOUTS", payload: json });
     }
   };
 
